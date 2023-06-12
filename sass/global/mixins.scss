@@ -1,0 +1,113 @@
+@mixin button-base($width) {
+  // padding: 0;
+  border: solid #ffffff 3px;
+  border-radius: 29px;
+  font-family: "Open sans", sans-serif;
+  font-weight: 700;
+
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  width: $width;
+}
+
+@mixin list-null {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin anysize($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin absolutecenter {
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin header2 {
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  @media (min-width: $tablet-width) {
+    font-size: 40px;
+    line-height: 120%;
+  }
+  @media (min-width: $desktop-width) {
+    font-size: 50px;
+    line-height: 70px;
+  }
+}
+
+@mixin header3 {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  text-align: center;
+  @media (min-width: $tablet-width) {
+    text-align: left;
+  }
+  @media (min-width: $desktop-width) {
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+  }
+}
+
+@mixin paragraph-null {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin footer-activities {
+  & svg {
+    &:hover .footer__image--283645 {
+      fill: #d22856;
+    }
+    &:active path,
+    &:active .footer__image--283645 {
+      fill: rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+@mixin activities {
+  & svg {
+    &:hover .logo__image--fff {
+      fill: #d22856;
+    }
+    &:active path,
+    &:active .logo__image--fff {
+      fill: rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+
+@mixin link-activities {
+  &:hover {
+    color: rgb(40, 54, 69);
+  }
+  &:active {
+    color: rgba(40, 54, 69, 0.3);
+  }
+}
+
+@mixin button-activities {
+  &:hover {
+    background-color: #ffffff;
+    color: #d22856;
+  }
+  &:active {
+    background-color: #ffffff;
+    color: rgba(210, 40, 86, 0.3);
+  }
+}

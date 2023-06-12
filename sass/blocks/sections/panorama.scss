@@ -1,0 +1,118 @@
+.panorama {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 46px;
+  }
+  @media (min-width: $desktop-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.panorama__image {
+  display: block;
+  object-fit: cover;
+  width: 320px;
+  height: 137px;
+  @media (min-width: $tablet-width) {
+    width: 660px;
+    height: 509px;
+  }
+  @media (min-width: $desktop-width) {
+    width: 1200px;
+    height: 506px;
+  }
+}
+
+.panorama__textbox {
+  width: 280px;
+
+  background-color: #f2f2f2;
+  color: #000000;
+  padding: 15px;
+  box-sizing: inherit;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  line-height: 20px;
+  justify-content: space-between;
+  @media (min-width: $tablet-width) {
+    width: 620px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 23px 29px;
+  }
+  @media (min-width: $desktop-width) {
+    width: 940px;
+    padding: 25px 30px 0px 27px;
+    margin-bottom: 30px;
+  }
+}
+
+.panorama__release {
+  display: flex;
+  margin-bottom: 10px;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 6px;
+  }
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+.panorama__response {
+  order: 3;
+  padding-left: 31px;
+  position: relative;
+  @media (min-width: $tablet-width) {
+    padding-left: 0px;
+    padding-right: 31px;
+    order: 2;
+  }
+}
+
+.panorama__response::after {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 12px;
+  background-image: url(../img/heart.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: 0;
+  top: calc(50% - 6px);
+  @media (min-width: $tablet-width) {
+    right: 0;
+    left: auto;
+    top: calc(50% - 11px);
+  }
+}
+
+.panorama__like {
+  @include paragraph-null;
+  color: #d22856;
+  display: flex;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.panorama__like-counter {
+  display: block;
+  padding-left: 5px;
+}
+
+.panorama__text {
+  @include paragraph-null;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 10px;
+  @media (min-width: $tablet-width) {
+    order: 3;
+  }
+  @media (min-width: $desktop-width) {
+    line-height: 24px;
+    width: 870px;
+    text-align: center;
+    margin-top: -10px;
+  }
+}

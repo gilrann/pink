@@ -1,0 +1,168 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form__wrapper {
+  display: grid;
+  grid-template-columns: 320px;
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 660px;
+  }
+  @media (min-width: $desktop-width) {
+    width: 940px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(6, 115px);
+    column-gap: 50px;
+    row-gap: 62px;
+  }
+}
+
+.personal {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / 4;
+  }
+}
+
+.useros {
+  grid-column: 1/2;
+  grid-row: 4/5;
+  @media (min-width: $tablet-width) {
+    grid-row: 2/3;
+  }
+  @media (min-width: $desktop-width) {
+    grid-column: 4/7;
+    grid-row: 1/2;
+  }
+}
+.formcontact {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  @media (min-width: $desktop-width) {
+    grid-column: 1/ -1;
+    grid-row: 2 / 3;
+  }
+}
+.achievement {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  @media (min-width: $tablet-width) {
+    grid-row: 4/5;
+  }
+  @media (min-width: $desktop-width) {
+    grid-column: 1/ -1;
+    grid-row: 3/ 4;
+  }
+}
+.emotions {
+  grid-column: 1/2;
+  grid-row: 5/6;
+  @media (min-width: $desktop-width) {
+    grid-column: 1/ -1;
+    grid-row: 4/ 5;
+  }
+}
+.service {
+  grid-column: 1/2;
+  grid-row: 6/7;
+  @media (min-width: $desktop-width) {
+    grid-column: 1/ -1;
+    grid-row: 5/ 6;
+  }
+}
+
+.form__area {
+  position: relative;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  @include paragraph-null;
+  padding-top: 40px;
+  padding-bottom: 44px;
+  margin: 0 auto;
+  @media (min-width: $tablet-width) {
+    padding-top: 55px;
+    padding-bottom: 30px;
+    border: solid #e5e5e5 2px;
+    margin-bottom: 60px;
+  }
+}
+
+.form__areaname {
+  position: absolute;
+  top: 40px;
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: #d22856;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    top: -23px;
+    background-color: #ffffff;
+    padding: 14px 25px;
+    z-index: 2;
+  }
+}
+
+.form__label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  color: #d22856;
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.form__labelname {
+  margin-left: 23px;
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
+    margin-right: 20px;
+  }
+}
+
+.form__field {
+  padding: 23px 0 23px 20px;
+  border: solid 2px #e5e5e5;
+  border-radius: 5px;
+  box-sizing: border-box;
+  &:hover {
+    border: solid 2px #283645;
+  }
+  &:active {
+    border: solid 2px #d22856;
+  }
+  @media (min-width: $tablet-width) {
+    flex-grow: 1;
+  }
+}
+
+.form__field::placeholder {
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+// Импорт филдсетов
+@import "form/personal.scss";
+@import "form/useros.scss";
+@import "form/formcontact.scss";
+@import "form/achievement.scss";
+@import "form/emotions.scss";
+@import "form/service.scss";
+
+// Импорт модального окна
+@import "form/modal.scss";

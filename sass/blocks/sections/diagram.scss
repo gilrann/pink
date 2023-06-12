@@ -1,0 +1,74 @@
+.diagram {
+  display: none;
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: flex-end;
+  }
+  @media (min-width: $desktop-width) {
+    background-color: #f2f2f2;
+  }
+}
+
+.diagram__contain {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  background-image: url(../img/timer-tablet.png);
+  background-repeat: no-repeat;
+  background-size: 238px 276px;
+  background-position: left top 16px;
+  padding: 60px 0px 25px 310px;
+
+  @media (min-width: $desktop-width) {
+    background-image: url(../img/timer-desktop.png);
+    background-size: 300px 346px;
+    background-position: left top;
+    padding: 95px 0px 115px 370px;
+
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+
+.diagram__subtitle {
+  @include header3;
+  font-size: 30px;
+
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    margin-bottom: 25px;
+  }
+}
+
+.diagram__subtitle--left {
+  margin-bottom: 7px;
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.diagram__text {
+  @include paragraph-null;
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 12px;
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.diagram__link {
+  color: #d22856;
+  font-size: 14px;
+  @include link-activities;
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}

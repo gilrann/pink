@@ -1,0 +1,55 @@
+@import "card.scss";
+@import "panorama.scss";
+
+.gallery {
+  padding-top: 60px;
+  box-sizing: inherit;
+  margin-bottom: 50px;
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+    margin-bottom: 64px;
+  }
+  @media (min-width: $desktop-width) {
+  }
+}
+
+.gallery__title {
+  width: 240px;
+  font-size: 14px;
+  line-height: 30px;
+  margin: 0 auto 60px;
+  color: #283645;
+  @media (min-width: $tablet-width) {
+    width: 440px;
+    font-size: 18px;
+    margin-bottom: 80px;
+  }
+  @media (min-width: $desktop-width) {
+    width: 560px;
+    margin-bottom: 90px;
+  }
+}
+
+.gallery__card {
+  margin-bottom: 20px;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.gallery__list {
+  @include list-null;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 455px;
+    gap: 20px;
+  }
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 590px;
+  }
+}

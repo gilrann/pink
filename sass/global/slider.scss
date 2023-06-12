@@ -1,0 +1,55 @@
+.slider {
+  position: relative;
+}
+
+.slider__toggles {
+  @include paragraph-null;
+  margin: 0 auto;
+  width: 56px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider__toggle {
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(40, 54, 69, 0.3);
+  border: none;
+  cursor: pointer;
+
+  &--current {
+    background-color: #ffffff;
+    outline: #283645 3px solid;
+  }
+  &:hover {
+    background-color: rgba(40, 54, 69, 0.6);
+  }
+  &:active {
+    background-color: rgba(40, 54, 69, 0.1);
+  }
+}
+
+.slider__arrows {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  justify-content: space-between;
+}
+
+.slider__arrow {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  &:hover path {
+    opacity: 0.6;
+  }
+  &:active path {
+    opacity: 0.1;
+  }
+}

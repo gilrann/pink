@@ -1,0 +1,18 @@
+.main__title {
+  margin: 0;
+  padding: 0;
+}
+
+.section__title {
+  @include header2;
+}
+
+@import "sections/intro.scss";
+@import "sections/information.scss";
+@import "sections/diagram.scss";
+@import "sections/review.scss";
+@import "sections/price.scss";
+@import "sections/contacts.scss";
+@import "sections/form.scss";
+@import "sections/gallery.scss";
+@import "sections/post.scss";

@@ -1,0 +1,112 @@
+.useros {
+  width: 320px;
+  background-color: #f2f2f2;
+  color: #000000;
+  padding-top: 115px;
+  @media (min-width: $tablet-width) {
+    width: 620px;
+    padding-top: 0;
+    background-color: #ffffff;
+    align-self: center;
+    margin-bottom: 66px;
+  }
+  @media (min-width: $desktop-width) {
+    width: auto;
+    margin: 0;
+    padding-bottom: 0px;
+    margin-left: 10px;
+    margin-top: 30px;
+    align-self: flex-start;
+  }
+}
+
+.useros__block {
+  width: 280px;
+  margin: 0 auto;
+  @media (min-width: $tablet-width) {
+    padding: 60px;
+    width: 620px;
+  }
+  @media (min-width: $desktop-width) {
+    width: auto;
+  }
+}
+
+.useros__areaname {
+  align-self: center;
+  width: 280px;
+  @media (min-width: $tablet-width) {
+    width: auto;
+  }
+}
+
+.useros__box {
+  padding: 0 20px;
+  @media (min-width: $tablet-width) {
+    padding: 50px 60px;
+    padding-bottom: 22px;
+  }
+  @media (min-width: $desktop-width) {
+    padding: 54px 0px 50px 75px;
+  }
+}
+
+.useros__wrapper {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: $tablet-width) {
+    gap: 40px;
+  }
+  @media (min-width: $desktop-width) {
+  }
+}
+
+.useros__label {
+  margin-bottom: 47px;
+  display: flex;
+  align-items: center;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0px;
+  }
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.useros__mark {
+  display: block;
+  width: 37px;
+  height: 37px;
+  background-color: #ffffff;
+  border: solid #e5e5e5 2px;
+  margin-right: 31px;
+  position: relative;
+  border-radius: 50%;
+  &:hover {
+    border: solid 2px #283645;
+  }
+  &:active {
+    border: solid 2px #d22856;
+  }
+  @media (min-width: $tablet-width) {
+    margin-right: 22px;
+  }
+}
+
+.useros__radioinput:checked + .useros__mark {
+  background-image: url(../img/pinkcheck.svg);
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.useros__name {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.useros__label--windowsphone {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+}

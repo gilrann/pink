@@ -1,0 +1,120 @@
+.achievement {
+  width: 320px;
+  background-color: #f2f2f2;
+  color: #000000;
+  padding-top: 115px;
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+    background-color: #ffffff;
+    width: 620px;
+    align-self: center;
+    padding-bottom: 0px;
+    margin-bottom: 68px;
+  }
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
+}
+
+.achievement__areaname {
+  align-self: center;
+  width: 280px;
+  @media (min-width: $tablet-width) {
+    width: auto;
+  }
+}
+
+.achievement__box {
+  @media (min-width: $tablet-width) {
+    padding: 54px 60px;
+    padding-bottom: 46px;
+  }
+  @media (min-width: $desktop-width) {
+    padding-bottom: 30px;
+  }
+}
+
+.achievement__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  @media (min-width: $tablet-width) {
+    gap: 42px;
+  }
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 260px 240px 210px;
+    column-gap: 55px;
+    row-gap: 50px;
+  }
+}
+
+.achievement__label {
+  display: flex;
+  align-items: center;
+}
+
+.achievement__label--selfie {
+  order: 1;
+}
+
+.achievement__label--chuck {
+  order: 3;
+  @media (min-width: $desktop-width) {
+    order: 2;
+  }
+}
+
+.achievement__label--notcrazy {
+  order: 5;
+  @media (min-width: $desktop-width) {
+    order: 3;
+  }
+}
+
+.achievement__label--beach {
+  order: 2;
+  @media (min-width: $desktop-width) {
+    order: 4;
+  }
+}
+
+.achievement__label--souvenirs {
+  order: 4;
+}
+
+.achievement__label--hotel {
+  order: 6;
+}
+
+.achievement__mark {
+  display: block;
+  width: 35px;
+  height: 35px;
+  background-color: #ffffff;
+  border: solid #e5e5e5 2px;
+  margin-right: 22px;
+  position: relative;
+  &:hover {
+    border: solid 2px #283645;
+  }
+  &:active {
+    border: solid 2px #d22856;
+  }
+  @media (min-width: $tablet-width) {
+    width: 38px;
+    height: 40px;
+  }
+}
+
+.achievement__field:checked + .achievement__mark {
+  background-image: url(../img/tick.svg);
+  background-size: 22px 15px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.achievement__info {
+  font-size: 18px;
+  line-height: 30px;
+}
